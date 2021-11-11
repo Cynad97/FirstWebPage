@@ -18,6 +18,16 @@ html{
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--white) 100%);
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(87,87,87,0.61);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(87,87,87,0.61);
+    box-shadow: 0px 5px 15px 0px rgba(87,87,87,0.61);
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
 h1 {
@@ -87,6 +97,7 @@ h1, h2, h3 {
     background-image: url(../Images/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 2rem;
     height: 450px;
     position: relative;
 }
@@ -113,6 +124,59 @@ h1, h2, h3 {
     align-items: flex-end;
 }
 
+/**services**/
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h3 {
+    color: var(--secundary);
+    font-weight: bold;
+}
+
+.service p {
+    line-height: 2;
+}
+
+.service .icons {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/**Contact**/
+
+.formulary {
+    background-color: var(--grey);
+    width: min(60rem, 100%); /**Utiliza el valor menor**/
+    margin: 0 auto; /**Cuando el padre no es un display:flex**/
+    padding: 2rem;
+    border-radius: 1rem;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.formulary fieldset {
+    border: none;
+}
+
+.formulary legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
 @media (min-width: 768px){
     .main-navigation {
         flex-direction: row;
@@ -121,6 +185,12 @@ h1, h2, h3 {
 
     .button {
         width: auto;
+    }
+
+    .services {
+        display:grid; 
+        grid-template-columns: repeat(3, 1fr); /**1fr una fracción**/
+        column-gap: 1rem;
     }
 }
 
